@@ -1,14 +1,16 @@
 # hoba-soft Homebrew tap
 
-Homebrew formulae for hoba-soft projects.
-
-This repository is currently private and is being prepared for public use.
-Formulae will reference versioned releases in their respective project repositories.
-
-After publication, install a project with:
+Install Hoba Light on macOS (Apple Silicon or Intel):
 
 ```sh
-brew install hoba-soft/tap/<formula>
+brew install hoba-soft/tap/hoba-light
 ```
 
-Update installed formulae with `brew update` and `brew upgrade`.
+Use `hl` or `hobalight`.
+
+```sh
+brew update
+brew upgrade hoba-light
+```
+
+[Hoba Light](https://github.com/hoba-soft/hoba-light)
