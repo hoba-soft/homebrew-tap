@@ -1,0 +1,28 @@
+name: Homebrew
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    name: Test (${{ matrix.runner }})
+    strategy:
+      fail-fast: false
+      matrix:
+        runner: [macos-15, macos-15-intel]
+    runs-on: ${{ matrix.runner }}
+    env:
+      HOMEBREW_NO_AUTO_UPDATE: '1'
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - name: Install and test
+        run: |
+          brew tap hoba-soft/tap "$GITHUB_WORKSPACE"
+          brew install hoba-soft/tap/hoba-light
+          brew test hoba-soft/tap/hoba-light
