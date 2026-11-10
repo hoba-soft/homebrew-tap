@@ -1,19 +1,19 @@
 class HobaLight < Formula
   desc "Command-line backup tool"
   homepage "https://github.com/hoba-soft/hoba-light"
-  version "1.1.0"
+  version "1.2.0"
   license "MIT"
 
   depends_on :macos
 
   on_arm do
-    url "https://github.com/hoba-soft/hoba-light/releases/download/v1.1.0/hobalight_1.1.0_darwin_arm64.tar.gz"
-    sha256 "9076b51b33799797336e64dcc89756824560d36c439a7db0485fa8cb8b523995"
+    url "https://github.com/hoba-soft/hoba-light/releases/download/v1.2.0/hobalight_1.2.0_darwin_arm64.tar.gz"
+    sha256 "74b1f86a50923eb612f42fa97300eeee4064bf3b9916d6f059c10a377a30f25c"
   end
 
   on_intel do
-    url "https://github.com/hoba-soft/hoba-light/releases/download/v1.1.0/hobalight_1.1.0_darwin_amd64.tar.gz"
-    sha256 "8074f5be6c01482f4f0ecefd8fb0c5f340f9ff521247246c2a64340b60dd1d67"
+    url "https://github.com/hoba-soft/hoba-light/releases/download/v1.2.0/hobalight_1.2.0_darwin_amd64.tar.gz"
+    sha256 "fd518393c91e69311b06fb7e0b683d7b7bcc04b588163efd25b8edda67c01deb"
   end
 
   def install
